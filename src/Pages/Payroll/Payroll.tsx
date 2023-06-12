@@ -152,7 +152,7 @@ const Payroll: React.FC = () => {
         }
         if(payout === "weekly" && !dayjs().isSame(dayjs().endOf("week"))){
             toast.dismiss()
-            toast.error("Selected employees have monthly payouts. \nYou can only generate payroll at the end of the month.", longToasterConfig)
+            toast.error("Selected employees have weekly payouts. \nYou can only generate payroll at the end of the week.", longToasterConfig)
             setIsGenerateClicked(false)
             return
         }
@@ -304,10 +304,10 @@ const Payroll: React.FC = () => {
             </div>
 
             <div className="payroll-btns-container">
-                <div className="payroll-generate-button-container">
+                {/* <div className="payroll-generate-button-container">
                     <input type="checkbox" checked={isGenerateStrict} onClick={()=>setIsGenerateStrict(prev=>!prev)}/>
                     <text>Is strict?  </text>
-                </div>
+                </div> */}
                 <div className="payroll-generate-button-container">
                     <Button
                     type={"generate-payroll"}

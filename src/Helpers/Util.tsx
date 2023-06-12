@@ -1,3 +1,5 @@
+import { AppNameRaw } from "./ClientSpecificInfo";
+
 export function formatMoney(x:string|number) {
     let str = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     str = str[0]===","? str.slice(1):str
@@ -26,4 +28,4 @@ export const getFullName = (fName:string, mName:string, lName:string) => {
     return fName + (mName.length>0? " "+mName:"") + " " + lName
 }
 
-export const AppName = "QTPi ERP System"
+export const AppName = AppNameRaw

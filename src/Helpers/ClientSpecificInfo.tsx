@@ -1,4 +1,3 @@
-export const AppName = "QTPi ERP System";
-export const CompanyName = "QTPi"
-export const BackendURL = "http://api.qtpi.ninja:8080/"
-export const Logo = "QTPI-logo.png"
+export const AppNameRaw = "SFGM ERP System";
+export const CompanyName = "SFGM"
+export const BackendURL = "http://api.sfgm.ninja:8080/"
